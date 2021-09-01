@@ -10,8 +10,8 @@
 
 export default class Character {
   constructor(name, type) {
-    // this.name = name;
-    // this.type = type;
+    this.name = name;
+    this.type = type;
     // this.strength = strength;
     // this.intelligence = intelligence;
     // this.charisma = charisma;
