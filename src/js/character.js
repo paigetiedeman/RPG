@@ -33,8 +33,8 @@ export default class Character {
       this.charisma = 0;
     }
   }
-  takeDamage(){
-    
+  takeDamage(damage){
+    this.health -= damage;
   }
 }
 
