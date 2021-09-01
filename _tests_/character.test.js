@@ -51,4 +51,14 @@ describe(Character, () => {
     character.heal(1);
     expect(character.health).toEqual(11);
   })
+
+  test('should increase stats by 2 and level by 1', () => {
+    let character = new Character("Rosa", "monk");
+    character.makeType();
+    character.levelUp();
+    expect(character.strength).toEqual(4);
+    expect(character.intelligence).toEqual(6);
+    expect(character.charisma).toEqual(9);
+    expect(character.level).toEqual(2);
+  })
 })

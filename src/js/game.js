@@ -2,7 +2,6 @@ import Character from "./character.js";
 
 // methods =
 // levelUp (increase level by 1 and increase stats by 2)
-// heal (will increase health)
 // takePotion(will increase stat depending on potion type)
 // 
 

@@ -36,9 +36,12 @@ export default class Character {
   takeDamage(damage){
     this.health -= damage;
   }
-  
+
   heal(damage){
   this.health += damage;
+  }
+  levelUp(){
+    
   }
 }
 
