@@ -34,10 +34,15 @@ describe(Character, () => {
   })
 
   test('should set default stats for enemy type', () =>{
-    let character = new Character("Goblin", "enemy")
+    let character = new Character("Goblin", "enemy");
     character.makeType();
     expect(character.strength).toEqual(4);
     expect(character.intelligence).toEqual(1);
     expect(character.charisma).toEqual(0);
+  })
+  test('should decrease health in current player by argument', () => {
+    let character = new Character("Rosa", "monk");
+    character.takeDamage(1);
+    expect(character.health).toEqual(9)
   })
 })
