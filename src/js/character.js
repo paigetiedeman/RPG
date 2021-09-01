@@ -2,6 +2,7 @@
 // character.js character would be a class,
 // player.js
 // game.js
+import Game from './game.js';
 
 export default class Character {
   constructor(name, type) {
