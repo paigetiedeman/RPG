@@ -12,11 +12,12 @@ export default class Character {
   constructor(name, type) {
     this.name = name;
     this.type = type;
+    this.experience = 0;
     // this.strength = strength;
     // this.intelligence = intelligence;
     // this.charisma = charisma;
-    // this.health = health;
-    // this.level = level;
+    this.health = 10;
+    this.level = 1;
   }
 }
 
