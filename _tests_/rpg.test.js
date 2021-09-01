@@ -17,4 +17,11 @@ describe(Character, () => {
     expect(character.intelligence).toEqual(6);
     expect(character.charisma).toEqual(1);
   })
+  test('should set default stats for warrior type', () =>{
+    let character = new Character("Chad", "warrior")
+    character.makeWarrior();
+    expect(character.strength).toEqual(8);
+    expect(character.intelligence).toEqual(2);
+    expect(character.charisma).toEqual(4);
+  })
 })
