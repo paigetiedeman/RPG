@@ -16,10 +16,9 @@ export default class Character {
     // this.intelligence = intelligence;
     // this.charisma = charisma;
     // this.health = health;
-    // this.mana = mana;
     // this.level = level;
   }
 }
 
 //
-//strength, intelligence, charisma, health, mana, level
+//strength, intelligence, charisma, health, level
