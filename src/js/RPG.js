@@ -17,19 +17,16 @@ export default class Character {
     this.intelligence = 0;
     this.charisma = 0;
   }
-  makeWizard() {
+  makeType() {
     if (this.type === "wizard"){
       this.strength = 3;
       this.intelligence = 6;
       this.charisma = 1;
-    }
-  }
-  makeWarrior() {
-    if (this.type === "warrior"){
+    } else if (this.type === "warrior"){
       this.strength = 8;
       this.intelligence = 2;
       this.charisma = 4;
     }
   }
-  
 }
+

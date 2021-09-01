@@ -12,16 +12,24 @@ describe(Character, () => {
 
   test('should set default stats for wizard type', () =>{
     let character = new Character("Bob", "wizard")
-    character.makeWizard();
+    character.makeType();
     expect(character.strength).toEqual(3);
     expect(character.intelligence).toEqual(6);
     expect(character.charisma).toEqual(1);
   })
   test('should set default stats for warrior type', () =>{
     let character = new Character("Chad", "warrior")
-    character.makeWarrior();
+    character.makeType();
     expect(character.strength).toEqual(8);
     expect(character.intelligence).toEqual(2);
     expect(character.charisma).toEqual(4);
+  })
+
+  test('should set default stats for monk type', () =>{
+    let character = new Character("Rosa", "monk")
+    character.makeType();
+    expect(character.strength).toEqual(2);
+    expect(character.intelligence).toEqual(4);
+    expect(character.charisma).toEqual(7);
   })
 })
