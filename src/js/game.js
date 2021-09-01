@@ -27,7 +27,11 @@ export default class Game {
     }
   }
   
-  addEnemy () {
+  addEnemy (character) {
+    this.enemy = character;
+  }
+
+  playersAttack () {
 
   }
   

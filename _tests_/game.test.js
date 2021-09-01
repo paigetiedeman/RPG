@@ -38,5 +38,13 @@ test('should add enemy character to game property', () => {
   game.addEnemy(characterThree);
     expect(game.enemy).toEqual(characterThree);
   })
+  
+  test('should allow player to decrease enemy health', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    game.addEnemy(characterThree);
+    game.playersAttack();
+    expect(game.enemy.health).toBeLessThan(10);
+  })
 })
 
