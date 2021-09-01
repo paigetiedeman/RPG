@@ -1,4 +1,4 @@
-import Character from "../src/js/character.js";
+import Character from "./../src/js/character.js";
 
 describe(Character, () => {
   test('should create a character object with name, type, level, health, experience', () => {

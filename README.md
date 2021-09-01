@@ -1,8 +1,8 @@
 # Project Name
 
-#### This is a site..
+#### This is a role playing game...
 
-#### _By Paige Tiedeman_
+#### _By Paige Tiedeman & Anna Clark_
 
 ## Technologies Used
 
@@ -40,8 +40,9 @@ This simple HTML site uses Javascript...
 
 _[MIT](https://opensource.org/licenses/MIT)_  
 
-Copyright (c) 2021 Paige Tiedeman
+Copyright (c) 2021 Paige Tiedeman and Anna Clarke
 
 ## Contact Information
 
-_Paige Tiedeman **paigetiedeman@gmail.com**_
+_Paige Tiedeman **paigetiedeman@gmail.com**_  
+_Anna Clarke **annac.klingberg@gmail.com**_
