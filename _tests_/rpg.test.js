@@ -12,6 +12,7 @@ describe(Character, () => {
 
   test('should set default stats for wizard type', () =>{
     let character = new Character("Bob", "wizard")
+    character.makeWizard();
     expect(character.strength).toEqual(3);
     expect(character.intelligence).toEqual(6);
     expect(character.charisma).toEqual(1);
