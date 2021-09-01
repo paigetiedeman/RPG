@@ -27,6 +27,10 @@ export default class Character {
       this.strength = 2;
       this.intelligence = 4;
       this.charisma = 7;
+    } else {
+      this.strength = 4;
+      this.intelligence = 1;
+      this.charisma = 0;
     }
   }
 }
