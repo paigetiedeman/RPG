@@ -1,4 +1,4 @@
-import Character from "./../src/js/RPG.js";
+import Character from "../src/js/character.js";
 
 describe(Character, () => {
   test('should create a character object with name, type, level, health, experience', () => {
@@ -31,5 +31,13 @@ describe(Character, () => {
     expect(character.strength).toEqual(2);
     expect(character.intelligence).toEqual(4);
     expect(character.charisma).toEqual(7);
+  })
+
+  test('should set default stats for enemy type', () =>{
+    let character = new Character("Goblin", "enemy")
+    character.makeType();
+    expect(character.strength).toEqual(4);
+    expect(character.intelligence).toEqual(1);
+    expect(character.charisma).toEqual(0);
   })
 })

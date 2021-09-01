@@ -13,9 +13,6 @@ export default class Character {
     this.experience = 0;
     this.health = 10;
     this.level = 1;
-    this.strength = 0;
-    this.intelligence = 0;
-    this.charisma = 0;
   }
   makeType() {
     if (this.type === "wizard"){
@@ -26,7 +23,7 @@ export default class Character {
       this.strength = 8;
       this.intelligence = 2;
       this.charisma = 4;
-    } else {
+    } else if (this.type === "monk"){
       this.strength = 2;
       this.intelligence = 4;
       this.charisma = 7;
