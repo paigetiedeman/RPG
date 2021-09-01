@@ -40,8 +40,12 @@ export default class Character {
   heal(damage){
   this.health += damage;
   }
+
   levelUp(){
-    
+    this.level += 1
+    this.intelligence += 2
+    this.charisma += 2
+    this.strength += 2
   }
 }
 
