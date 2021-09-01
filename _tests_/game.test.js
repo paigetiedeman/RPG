@@ -20,10 +20,16 @@ describe(Game, () => {
     expect(game.playerOneTurn).toEqual(true);
     expect(game.playerTwoTurn).toEqual(false);
   })
-  test('should change between playerOne and playerTwo turn', () => {
+  test('should change playerOneTurn from true to false and playerTwoTurn from false to true', () => {
     game.changeTurn();
     expect(game.playerOneTurn).toEqual(false);
     expect(game.playerTwoTurn).toEqual(true);
+  })
+  test('should change playerOneTurn from false to true and playerTwoTurn from true to false', () => {
+    game.changeTurn();
+    game.changeTurn();
+    expect(game.playerOneTurn).toEqual(true);
+    expect(game.playerTwoTurn).toEqual(false);
   })
 })
 

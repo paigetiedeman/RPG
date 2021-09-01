@@ -16,7 +16,13 @@ export default class Game {
     this.playerTwoTurn = false;
   }
   changeTurn () {
-    
+    if (this.playerOneTurn) {
+      this.playerOneTurn = false;
+      this.playerTwoTurn = true;
+    } else {
+      this.playerOneTurn = true;
+      this.playerTwoTurn = false;
+    }
   }
   
 }
