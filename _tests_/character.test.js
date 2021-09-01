@@ -45,4 +45,10 @@ describe(Character, () => {
     character.takeDamage(1);
     expect(character.health).toEqual(9)
   })
+
+  test('should increase health in current player by argument', () => {
+    let character = new Character("Rosa", "monk");
+    character.heal(1);
+    expect(character.health).toEqual(11);
+  })
 })
