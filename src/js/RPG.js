@@ -18,7 +18,11 @@ export default class Character {
     this.charisma = 0;
   }
   makeWizard() {
-    
+    if (this.type === "wizard"){
+      this.strength = 3;
+      this.intelligence = 6;
+      this.charisma = 1;
+    }
   }
   
 }
