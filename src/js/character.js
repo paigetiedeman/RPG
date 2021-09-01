@@ -1,8 +1,5 @@
 // Classes = character, player,
 // character.js character would be a class,
-// wizard high intelligence
-// warrior high strength,
-// monk high charisma
 // player.js
 // game.js
 
@@ -13,6 +10,7 @@ export default class Character {
     this.experience = 0;
     this.health = 10;
     this.level = 1;
+    this.progress = 0;
   }
   makeType() {
     if (this.type === "wizard"){
@@ -42,10 +40,16 @@ export default class Character {
   }
 
   levelUp(){
-    this.level += 1
-    this.intelligence += 2
-    this.charisma += 2
-    this.strength += 2
+    // if (this.progress === 10){
+      this.level += 1;
+      this.intelligence += 2;
+      this.charisma += 2;
+      this.strength += 2;
+      // this.progress = 0
+    // }
   }
+  
+
+
 }
 

@@ -1,13 +1,14 @@
 import Character from "./../src/js/character.js";
 
 describe(Character, () => {
-  test('should create a character object with name, type, level, health, experience', () => {
+  test('should create a character object with name, type, level, health, experience, progress', () => {
     let character = new Character("Bob", "wizard");
     expect(character.name).toEqual("Bob");
     expect(character.type).toEqual("wizard");
     expect(character.level).toEqual(1);
     expect(character.health).toEqual(10);
     expect(character.experience).toEqual(0);
+    expect(character.progress).toEqual(0);
   })
 
   test('should set default stats for wizard type', () =>{
@@ -52,13 +53,18 @@ describe(Character, () => {
     expect(character.health).toEqual(11);
   })
 
-  test('should increase stats by 2 and level by 1', () => {
+  test('should increase stats by 2 and level by 1 and set progress back to 0 if progress is equal to 10 or more', () => {
     let character = new Character("Rosa", "monk");
     character.makeType();
+    character.progress = 10
     character.levelUp();
     expect(character.strength).toEqual(4);
     expect(character.intelligence).toEqual(6);
     expect(character.charisma).toEqual(9);
     expect(character.level).toEqual(2);
+    expect(character.progress).toEqual(0);
   })
+
+
+
 })
