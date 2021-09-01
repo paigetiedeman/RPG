@@ -24,5 +24,12 @@ export default class Character {
       this.charisma = 1;
     }
   }
+  makeWarrior() {
+    if (this.type === "warrior"){
+      this.strength = 8;
+      this.intelligence = 2;
+      this.charisma = 4;
+    }
+  }
   
 }
