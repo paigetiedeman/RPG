@@ -65,6 +65,17 @@ describe(Character, () => {
     expect(character.progress).toEqual(0);
   })
 
+  test('should not increase stats by 2 and level by 1 and set progress back to 0 if progress is less than 10', () => {
+    let character = new Character("Rosa", "monk");
+    character.makeType();
+    character.progress = 9
+    character.levelUp();
+    expect(character.strength).toEqual(2);
+    expect(character.intelligence).toEqual(4);
+    expect(character.charisma).toEqual(7);
+    expect(character.level).toEqual(1);
+    expect(character.progress).toEqual(9);
+  })
 
 
 })

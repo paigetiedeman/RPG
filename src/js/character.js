@@ -40,13 +40,13 @@ export default class Character {
   }
 
   levelUp(){
-    // if (this.progress === 10){
+    if (this.progress >= 10){
       this.level += 1;
       this.intelligence += 2;
       this.charisma += 2;
       this.strength += 2;
-      // this.progress = 0
-    // }
+      this.progress = 0
+    }
   }
   
 
