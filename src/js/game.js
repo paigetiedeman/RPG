@@ -32,7 +32,7 @@ export default class Game {
   }
 
   playersAttack () {
-
+    this.enemy.takeDamage(1);
   }
   
 }
