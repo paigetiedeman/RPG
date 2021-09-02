@@ -46,5 +46,13 @@ test('should add enemy character to game property', () => {
     game.playersAttack();
     expect(game.enemy.health).toBeLessThan(10);
   })
+
+  test('should access the playerOne stat if playOneTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    game.addEnemy(characterThree);
+    game.playersAttack(strength);
+    expect(currentPlayerStat).toEqual(game.playerOne.strength);
+  })
 })
 
