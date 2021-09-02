@@ -42,17 +42,28 @@ test('should add enemy character to game property', () => {
   test('should allow player to decrease enemy health', () => {
     let characterThree = new Character('Goblin', 'enemy');
     characterThree.makeType();
+    characterOne.makeType();
     game.addEnemy(characterThree);
-    game.playersAttack();
+    game.playersStrAttack();
     expect(game.enemy.health).toBeLessThan(10);
   })
 
-  test('should access the playerOne stat if playOneTurn is true', () => {
+  test('should deal damage that is difference between enemy strength and current player strength if PlayerOneTurn is true', () => {
     let characterThree = new Character('Goblin', 'enemy');
     characterThree.makeType();
+    characterOne.makeType();
     game.addEnemy(characterThree);
-    game.playersAttack(strength);
-    expect(currentPlayerStat).toEqual(game.playerOne.strength);
+    game.playersStrAttack();
+    expect(characterThree.health).toEqual(6);
+  })
+  
+  test('should deal damage that is difference between enemy strength and current player strength if playerTwoTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterTwo.makeType();
+    game.addEnemy(characterThree);
+    game.playersStrAttack();
+    expect(characterThree.health).toEqual(10);
   })
 })
 
