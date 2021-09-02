@@ -44,19 +44,24 @@ export default class Game {
     }
     let enemyStat = this.enemy.strength;
     let damage = currentPlayerStat - enemyStat;
-    this.enemy.takeDamage(damage);
+    if (damage > 0) {
+      this.enemy.takeDamage(damage);
+    }
   }
 
   playersIntAttack() {
     let currentPlayerStat;
-    if (this.this.playerOneTurn) {
+    if (this.playerOneTurn) {
       currentPlayerStat = this.playerOne.intelligence;
     } else {
       currentPlayerStat = this.playerTwo.intelligence;
     }
     let enemyStat = this.enemy.intelligence;
+    console.log(currentPlayerStat);
     let damage = currentPlayerStat - enemyStat;
-    this.enemy.takeDamage(damage);
+    if (damage > 0) {
+      this.enemy.takeDamage(damage);
+    }
   }
 
   playersChaAttack(){
@@ -68,6 +73,8 @@ export default class Game {
     }
     let enemyStat = this.enemy.charisma;
     let damage = currentPlayerStat - enemyStat;
-    this.enemy.takeDamage(damage);
+    if (damage > 0) {
+      this.enemy.takeDamage(damage);
+    }
   }
 }

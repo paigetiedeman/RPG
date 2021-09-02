@@ -62,8 +62,65 @@ test('should add enemy character to game property', () => {
     characterThree.makeType();
     characterTwo.makeType();
     game.addEnemy(characterThree);
+    game.changeTurn();
     game.playersStrAttack();
     expect(characterThree.health).toEqual(10);
+  })
+
+  test('should allow player to decrease enemy health', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterOne.makeType();
+    game.addEnemy(characterThree);
+    game.playersIntAttack();
+    expect(game.enemy.health).toBeLessThan(10);
+  })
+
+  test('should deal damage that is difference between enemy intelligence and current player intelligence if PlayerOneTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterOne.makeType();
+    game.addEnemy(characterThree);
+    game.playersIntAttack();
+    expect(characterThree.health).toEqual(9);
+  })
+  
+  test('should deal damage that is difference between enemy intelligence and current player intelligence if playerTwoTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterTwo.makeType();
+    game.addEnemy(characterThree);
+    game.changeTurn();
+    game.playersIntAttack();
+    expect(characterThree.health).toEqual(7);
+  })
+
+  test('should allow player to decrease enemy health', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterOne.makeType();
+    game.addEnemy(characterThree);
+    game.playersChaAttack();
+    expect(game.enemy.health).toBeLessThan(10);
+  })
+
+  test('should deal damage that is difference between enemy charisma and current player charisma if PlayerOneTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterOne.makeType();
+    game.addEnemy(characterThree);
+    game.playersChaAttack();
+    expect(characterThree.health).toEqual(6);
+  })
+  
+  test('should deal damage that is difference between enemy charisma and current player charisma if playerTwoTurn is true', () => {
+    let characterThree = new Character('Goblin', 'enemy');
+    characterThree.makeType();
+    characterTwo.makeType();
+    game.addEnemy(characterThree);
+    game.changeTurn();
+    game.playersChaAttack();
+    expect(characterThree.health).toEqual(3);
   })
 })
 
